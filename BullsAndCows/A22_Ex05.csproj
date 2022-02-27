@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C22C71E-D78E-46F9-985E-A22483D4D09C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>A22_Ex05</RootNamespace>
+    <AssemblyName>A22_Ex05</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormBoolPgiaGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBoolPgiaGame.Designer.cs">
+      <DependentUpon>FormBoolPgiaGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BullsAndCowsUpdate.cs" />
+    <Compile Include="ComputerGuess.cs" />
+    <Compile Include="GuessAndResult.cs" />
+    <Compile Include="FormPickColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPickColor.Designer.cs">
+      <DependentUpon>FormPickColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="FormBoolPgiaSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBoolPgiaSetting.Designer.cs">
+      <DependentUpon>FormBoolPgiaSetting.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Ex02.ConsoleUtils">
+      <HintPath>..\..\..\..\..\..\Temp\Ex02.ConsoleUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormBoolPgiaSetting.resx">
+      <DependentUpon>FormBoolPgiaSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBoolPgiaGame.resx">
+      <DependentUpon>FormBoolPgiaGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPickColor.resx">
+      <DependentUpon>FormPickColor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
